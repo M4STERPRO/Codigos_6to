@@ -12,13 +12,13 @@ union FloatBytes {
 
 int main() {
     
-    union FloatBytes float;
+    union FloatBytes flot;
     printf("Escriba el número flotante\n");
-    scanf("%f", &float.num);
+    scanf("%f", &flot.num);
 
-    printf("El signo del flotante es: %d\n", float.signo);
-    printf("El exponente del flotante es: %d\n", float.exponente);
-    printf("La mantisa del flotante es: %d\n", float.mantisa);
+    printf("El signo del flotante es: %d\n", flot.signo);
+    printf("El exponente del flotante es: %d\n", flot.exponente);
+    printf("La mantisa del flotante es: %d\n", flot.mantisa);
 
     return 0;
 }
