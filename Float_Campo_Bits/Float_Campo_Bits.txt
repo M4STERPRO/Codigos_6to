@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+union FloatBytes {
+    float num;
+    
+    struct {
+        unsigned int mantisa: 23;
+        unsigned int exponente: 8;
+        unsigned int signo: 1;
+    };
+};
+
+int main() {
+    
+    union FloatBytes float;
+    printf("Escriba el número flotante\n");
+    scanf("%f", &float.num);
+
+    printf("El signo del flotante es: %d\n", float.signo);
+    printf("El exponente del flotante es: %d\n", float.exponente);
+    printf("La mantisa del flotante es: %d\n", float.mantisa);
+
+    return 0;
+}
