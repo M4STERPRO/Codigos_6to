@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-union FloatBytes {
+union floatBytes {
     float num;
     
     struct {
