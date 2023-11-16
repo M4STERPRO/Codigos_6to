@@ -1,38 +1,16 @@
 #include <stdio.h>
+void mifunc(char *mivar);
 
-int stringCmp (const char* var1, const char* var2);
-
-int main() {
-    char var1[20];
-    char var2[20];
-
-    printf("Ingrese el primer string: ");
-    scanf("%s", var1);
-    printf("Ingrese el segundo string: ");
-    scanf("%s", var2);
-
-    int resultado = stringCmp(var1, var2);
-
-    if (resultado == 0) {
-        printf("Los strings son iguales.\n");
-    } else {
-        printf("Los strings son distintos.\n");
-    }
-
+int main (void){
+    
+    char mivarlocal=3;
+    mifunc(&mivarlocal);
+    printf("mivarlocal en main vale: %d\n",mivarlocal);
     return 0;
 }
+void mifunc(char *mivar){
+    
+    (*mivar)++;
+    printf("mi var en mifunc vale: %d\n",*mivar);
 
-int stringCmp (const char* var1, const char* var2)
-{
-    while (*var1 != '\0' || *var2 != '\0')
-    {
-        if (*var1 != *var2)
-        {
-            return 1;
-        }
-    var1++;
-    var2++;
-    }
-
-    return 0;
 }
