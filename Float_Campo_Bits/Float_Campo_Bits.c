@@ -12,7 +12,7 @@ union floatBytes {
 
 int main() {
     
-    union FloatBytes flot;
+    union floatBytes flot;
     printf("Escriba el número flotante\n");
     scanf("%f", &flot.num);
 
